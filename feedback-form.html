@@ -5,70 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Support – My App</title>
   <style>
+    :root {
+      color-scheme: dark;
+      --bg: #181c24;
+      --card-bg: #232735;
+      --primary: #54b4fa;
+      --primary-hover: #0071c7;
+      --text: #eaeaea;
+      --input-bg: #222634;
+      --input-border: #44495e;
+      --footer: #8a8c99;
+      --error: #ff3860;
+    }
     body {
-      font-family: sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
       padding: 2rem;
+      margin: 0;
+      min-height: 100vh;
     }
     .container {
-      max-width: 600px;
-      background: white;
-      margin: auto;
-      padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      max-width: 480px;
+      background: var(--card-bg);
+      margin: 3rem auto;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 6px 24px #000a  ;
+      border-radius: 18px;
+      border: 1.5px solid #262a37;
+      position: relative;
     }
     h1 {
       text-align: center;
-      color: #333;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      font-weight: 600;
+      letter-spacing: 1px;
     }
     label {
       display: block;
-      margin-top: 1rem;
-      font-weight: bold;
+      margin-top: 1.25rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
     }
     input, textarea {
       width: 100%;
-      padding: 0.75rem;
-      margin-top: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      margin-top: 0.4rem;
+      padding: 0.85rem 1rem;
+      background: var(--input-bg);
+      color: var(--text);
+      border: 1.5px solid var(--input-border);
+      border-radius: 7px;
       font-size: 1rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--primary);
+    }
+    textarea {
+      min-height: 110px;
+      resize: vertical;
     }
     button {
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      background: #007bff;
-      color: white;
+      width: 100%;
+      margin-top: 2rem;
+      padding: 0.85rem 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: var(--primary);
+      color: #fff;
       border: none;
-      border-radius: 5px;
+      border-radius: 7px;
+      box-shadow: 0 2px 12px #1e2a4c55;
       cursor: pointer;
+      transition: background 0.2s;
     }
     button:hover {
-      background: #0056b3;
+      background: var(--primary-hover);
     }
     .footer {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       text-align: center;
-      font-size: 0.9rem;
-      color: #777;
+      font-size: 0.95rem;
+      color: var(--footer);
+      opacity: 0.85;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    .recaptcha {
+      margin-top: 1.7rem;
+      display: flex;
+      justify-content: center;
+    }
+    @media (max-width: 500px) {
+      .container { padding: 1rem 0.5rem; }
     }
   </style>
+  <!-- Google reCAPTCHA v2 -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <div class="container">
     <h1>Contact Support</h1>
-    <form action="https://formspree.io/f/xgvypyby" method="POST">
+    <form 
+      action="https://formspree.io/f/xgvypyby" 
+      method="POST"
+      autocomplete="on"
+    >
       <label for="name">Your Name</label>
-      <input type="text" name="name" id="name" required />
+      <input type="text" name="name" id="name" required autocomplete="name" />
 
       <label for="email">Your Email</label>
-      <input type="email" name="email" id="email" required />
+      <input type="email" name="email" id="email" required autocomplete="email" />
 
-      <label for="message">Issue / Feature Request / Feedback</label>
-      <textarea name="message" id="message" rows="6" required></textarea>
-
+      <label for="message">Issue / Feature Request</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+      
+      <div class="recaptcha">
+        <div class="g-recaptcha" data-sitekey="6LcsTG0rAAAAALxUa06ktVMmRnNY8ImYfr1k5uIs"></div>
+      </div>
+      
       <button type="submit">Send</button>
     </form>
   </div>
