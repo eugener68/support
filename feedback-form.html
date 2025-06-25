@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support – My App</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f4f4f4;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      background: white;
+      margin: auto;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Support</h1>
+    <form action="https://formspree.io/f/xgvypyby" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="message">Issue / Feature Request / Feedback</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</body>
+</html>
