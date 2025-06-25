@@ -1,1 +1,1 @@
-This is privacy policy repo
+This is AppStore Support page
