@@ -1,86 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>EbookLib - Your OPDS eBook Catalog Browser</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            margin-top: 20px;
-            border-radius: 8px;
-        }
-        h1 {
-            color: white;
-        }
-        h2 {
-            color: #2c3e50;
-        }
-        ul {
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #2c3e50;
-            color: white;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>EbookLib – Your OPDS eBook Catalog Browser</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: #f6f3fb;
+      color: #2c1e4a;
+    }
+
+    header {
+      background-color: #5f4bb6;
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin: 0 0 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin: 0;
+      opacity: 0.9;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: #5f4bb6;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #5f4bb6;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1e1b2f;
+        color: #ffffff;
+      }
+
+      section {
+        background-color: #2a2440;
+        color: #ffffff;
+      }
+
+      h2 {
+        color: #a992f5;
+      }
+
+      header, footer {
+        background-color: #4b3a94;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>EbookLib</h1>
-        <p>OPDS eBook Catalog Browser with iCloud Sync</p>
-    </header>
+  <header>
+    <h1>EbookLib</h1>
+    <p>OPDS eBook Catalog Browser with iCloud Sync</p>
+  </header>
 
-    <section>
-        <h2>About EbookLib</h2>
-        <p>
-            EbookLib is a powerful and modern iOS application that allows users to browse added OPDS eBook catalogs,
-            browse and download eBooks in desired formats.
-            Users can add and store their favorite catalogs in iCloud, ensuring access across all their iOS devices.
-            Downloaded eBooks (FB2, ePub, mobi) can be read using the reader of choice (ePub Reader, Books, FBReader etc).
-        </p>
-    </section>
+  <section>
+    <h2>About EbookLib</h2>
+    <p>
+      EbookLib is a powerful and modern iOS application that allows users to browse and manage OPDS eBook catalogs,
+      download books in multiple formats, and enjoy a seamless reading experience across devices. 
+      With iCloud integration, your catalog list and downloaded books stay in sync between your iPhone and iPad.
+    </p>
+  </section>
 
-    <section>
-        <h2>Key Features</h2>
-        <ul>
-            <li>Add, edit, delete OPDS Catalogs</li>
-            <li>Browse eBooks in catalogs</li>
-            <li>Manage catalogs stored in iCloud</li>
-            <li>Catalog list is shared across iPhone and iPad</li>
-            <li>Download eBooks in FB2, ePub, and mobi formats</li>
-            <li>Read downloaded eBooks with your preferred reader</li>
-            <li>Built-in ePub reader with shared eBook progress and bookmarks (yet to come in future releases)</li>
-        </ul>
-    </section>
+  <section>
+    <h2>Key Features</h2>
+    <ul>
+      <li>Add, edit, and delete OPDS catalogs</li>
+      <li>Browse and search eBooks within added catalogs</li>
+      <li>User catalog list is stored in iCloud and shared across devices</li>
+      <li>Download eBooks in FB2, ePub, and mobi formats</li>
+      <li>New Library tab to view and organize downloaded books</li>
+      <li>Open downloaded books in your preferred reader (e.g., Apple Books, FBReader, Marvin)</li>
+      <li>Planned: Built-in ePub reader with syncable progress and bookmarks</li>
+    </ul>
+  </section>
 
-    <section>
-        <h2>Get Started</h2>
-        <p>
-            Download EbookLib from the Apple App Store and start exploring a world of free eBooks today!
-        </p>
-    </section>
+  <section>
+    <h2>Get Started</h2>
+    <p>
+      Download EbookLib from the Apple App Store and start exploring a world of free eBooks today!
+    </p>
+  </section>
 
-    <footer>
-        &copy; 2025 Eugene Roitberg. All rights reserved.
-    </footer>
+  <footer>
+    &copy; 2025 Eugene Roitberg. All rights reserved.
+  </footer>
 </body>
 </html>
