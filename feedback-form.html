@@ -1,167 +1,402 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Support – My App</title>
+  <title>Contact Support — EugeneR68 Software LLC</title>
+  <meta name="description" content="Contact support for EugeneR68 Software LLC apps." />
+
   <style>
-:root {
-  color-scheme: dark;
-  --bg: #181c24;
-  --card-bg: #232735;
-  --primary: #54b4fa;
-  --primary-hover: #0071c7;
-  --text: #eaeaea;
-  --input-bg: #222634;
-  --input-border: #44495e;
-  --footer: #8a8c99;
-}
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  margin: 0;
-  min-height: 100vh;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.container {
-  width: 95vw;
-  max-width: 420px;
-  background: var(--card-bg);
-  margin: 2rem auto;
-  padding: 1.2rem 1rem 1.8rem 1rem;
-  box-shadow: 0 4px 24px #0008;
-  border-radius: 16px;
-  border: 1.5px solid #262a37;
-}
-h1 {
-  text-align: center;
-  font-size: 1.6rem;
-  margin-bottom: 1.2rem;
-  color: var(--primary);
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-label {
-  display: block;
-  margin-top: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  font-size: 1rem;
-}
-input, textarea {
-  width: 100%;
-  margin-top: 0.3rem;
-  padding: 0.75rem 0.7rem;
-  background: var(--input-bg);
-  color: var(--text);
-  border: 1.2px solid var(--input-border);
-  border-radius: 6px;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color .2s;
-  box-sizing: border-box;
-}
-input:focus, textarea:focus {
-  border-color: var(--primary);
-}
-textarea {
-  min-height: 85px;
-  resize: vertical;
-}
-button {
-  width: 100%;
-  margin-top: 1.4rem;
-  padding: 0.85rem 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  box-shadow: 0 1px 8px #1e2a4c33;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-button:hover {
-  background: var(--primary-hover);
-}
-.footer {
-  margin-top: 1.4rem;
-  text-align: center;
-  font-size: 0.93rem;
-  color: var(--footer);
-  opacity: 0.85;
-}
-a {
-  color: var(--primary);
-  text-decoration: underline;
-}
-.recaptcha {
-  margin-top: 1.2rem;
-  display: flex;
-  justify-content: center;
-  overflow-x: auto;
-  max-width: 100%;
-}
-/* Responsive tweaks */
-@media (max-width: 500px) {
-  .container {
-    max-width: 98vw;
-    margin: 1.3rem 0.5vw;
-    padding: 0.9rem 0.4rem 1.2rem 0.4rem;
-    border-radius: 11px;
-  }
-  h1 {
-    font-size: 1.23rem;
-    margin-bottom: 1.05rem;
-  }
-  input, textarea {
-    font-size: 0.97rem;
-    padding: 0.65rem 0.5rem;
-  }
-  button {
-    font-size: 1rem;
-    padding: 0.65rem 0;
-    border-radius: 5px;
-    margin-top: 1rem;
-  }
-}
+    :root {
+      color-scheme: dark;
+      --bg: #0b1020;
+      --bg2: #111936;
+      --text: #f7f8ff;
+      --muted: rgba(247,248,255,.72);
+      --soft: rgba(247,248,255,.55);
+      --line: rgba(255,255,255,.16);
+      --card: rgba(255,255,255,.09);
+      --accent: #7dd3fc;
+      --accent2: #c084fc;
+      --accent3: #34d399;
+      --radius: 28px;
+      --shadow: 0 24px 80px rgba(0,0,0,.38);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 16% 8%, rgba(125,211,252,.32), transparent 32rem),
+        radial-gradient(circle at 85% 5%, rgba(192,132,252,.28), transparent 34rem),
+        radial-gradient(circle at 75% 86%, rgba(52,211,153,.20), transparent 32rem),
+        linear-gradient(135deg, var(--bg), var(--bg2) 58%, #080b16);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.8), transparent 85%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .page {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 28px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      letter-spacing: -.03em;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 12px 30px rgba(125,211,252,.24);
+      color: #06101d;
+      font-weight: 900;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    .hero {
+      padding: 76px 0 34px;
+      max-width: 920px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.07);
+      color: var(--muted);
+      font-size: 14px;
+      backdrop-filter: blur(18px);
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--accent3);
+      box-shadow: 0 0 0 6px rgba(52,211,153,.14);
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 84px);
+      line-height: .95;
+      margin: 24px 0 24px;
+      letter-spacing: -.075em;
+    }
+
+    .gradient {
+      background: linear-gradient(100deg, #fff, #c9efff 35%, #e5d4ff 70%, #d8fff0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      font-size: clamp(20px, 2.3vw, 27px);
+      line-height: 1.42;
+      color: var(--muted);
+      margin: 0;
+      max-width: 840px;
+    }
+
+    .support-layout {
+      display: grid;
+      grid-template-columns: .92fr 1.08fr;
+      gap: 22px;
+      align-items: start;
+      padding: 34px 0 70px;
+    }
+
+    .info-card,
+    .container {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.06));
+      backdrop-filter: blur(22px);
+      box-shadow: var(--shadow);
+    }
+
+    .info-card {
+      padding: 30px;
+    }
+
+    .info-card h2 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1;
+      letter-spacing: -.055em;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      line-height: 1.55;
+      margin: 0 0 18px;
+    }
+
+    .quick-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .quick-item {
+      padding: 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .quick-item strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    .container h1 {
+      font-size: 36px;
+      line-height: 1;
+      margin: 0 0 8px;
+      letter-spacing: -.045em;
+    }
+
+    .form-subtitle {
+      color: var(--muted);
+      margin: 0 0 24px;
+      line-height: 1.5;
+    }
+
+    label {
+      display: block;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: .01em;
+      font-size: 15px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 15px 16px;
+      background: rgba(255,255,255,.08);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color .2s, box-shadow .2s, background .2s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: rgba(125,211,252,.7);
+      box-shadow: 0 0 0 4px rgba(125,211,252,.12);
+      background: rgba(255,255,255,.105);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      min-height: 54px;
+      margin-top: 22px;
+      padding: 0 22px;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: .01em;
+      background: #fff;
+      color: #09111f;
+      border: none;
+      border-radius: 999px;
+      box-shadow: 0 18px 45px rgba(255,255,255,.13);
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease;
+      font-family: inherit;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 50px rgba(255,255,255,.18);
+    }
+
+    .recaptcha {
+      margin-top: 22px;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      max-width: 100%;
+      padding: 4px 0;
+    }
+
+    .fineprint {
+      color: var(--soft);
+      font-size: 14px;
+      line-height: 1.45;
+      margin: 18px 0 0;
+      text-align: center;
+    }
+
+    footer {
+      padding: 42px 0 56px;
+      color: var(--soft);
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer a { color: var(--muted); }
+
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .support-layout { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+    }
+
+    @media (max-width: 520px) {
+      .page { width: min(100% - 26px, 1160px); }
+      h1 { font-size: 46px; }
+      .container, .info-card { padding: 22px; border-radius: 22px; }
+      .container h1 { font-size: 30px; }
+      .recaptcha { justify-content: flex-start; }
+    }
   </style>
+
   <!-- Google reCAPTCHA v2 -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Contact Support</h1>
-    <form 
-      action="https://formspree.io/f/xgvypyby" 
-      method="POST"
-      autocomplete="on"
-    >
-      <label for="name">Your Name</label>
-      <input type="text" name="name" id="name" required autocomplete="name" />
+  <div class="page">
+    <header>
+      <a class="brand" href="index.html">
+        <div class="logo">ER</div>
+        <span>EugeneR68 Software LLC</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="AITriviaNight.html">AI Trivia Night</a>
+        <a href="marketing.html">EbookLib</a>
+        <a href="feedback-form.html">Support</a>
+      </nav>
+    </header>
 
-      <label for="email">Your Email</label>
-      <input type="email" name="email" id="email" required autocomplete="email" />
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="pulse"></span> Support & feedback</div>
+        <h1><span class="gradient">Contact support</span><br>Questions, issues, ideas.</h1>
+        <p class="lead">Need help with AI Trivia Night, EbookLib, or another EugeneR68 Software LLC product? Tell us what happened and how we can help.</p>
+      </section>
 
-      <label for="message">Issue / Feature Request</label>
-      <textarea name="message" id="message" rows="5" required></textarea>
-      
-      <div class="recaptcha">
-        <div class="g-recaptcha" data-sitekey="6Lc-Tm0rAAAAAPfjueAfh5xWZP8CkEvHiKC_sot8"></div>
+      <section class="support-layout">
+        <aside class="info-card">
+          <h2>What to include</h2>
+          <p>The more detail you provide, the faster we can understand the issue. Tiny bug reports are good. Specific bug reports are beautiful.</p>
+
+          <div class="quick-list">
+            <div class="quick-item"><strong>App name</strong>AI Trivia Night, EbookLib, or another product.</div>
+            <div class="quick-item"><strong>Device & version</strong>iPhone, iPad, Android device, OS version, and app version if available.</div>
+            <div class="quick-item"><strong>What happened</strong>Steps to reproduce the issue, screenshots, or the exact error message.</div>
+          </div>
+        </aside>
+
+        <div class="container">
+          <h1>Contact Support</h1>
+          <p class="form-subtitle">This secure form uses your existing Formspree endpoint and Google reCAPTCHA verification.</p>
+
+          <form 
+            action="https://formspree.io/f/xgvypyby" 
+            method="POST"
+            autocomplete="on"
+          >
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name" required autocomplete="name" />
+
+            <label for="email">Your Email</label>
+            <input type="email" name="email" id="email" required autocomplete="email" />
+
+            <label for="message">Issue / Feature Request</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+
+            <div class="recaptcha">
+              <div class="g-recaptcha" data-sitekey="6Lc-Tm0rAAAAAPfjueAfh5xWZP8CkEvHiKC_sot8"></div>
+            </div>
+
+            <button type="submit">Send</button>
+          </form>
+
+          <p class="fineprint">Protected by Google reCAPTCHA. Your message will be submitted through the support form.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2026 EugeneR68 Software LLC. All rights reserved.</div>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        &nbsp;•&nbsp;
+        <a href="terms.html">Terms</a>
+        &nbsp;•&nbsp;
+        <a href="feedback-form.html">Contact</a>
       </div>
-      
-      <button type="submit">Send</button>
-    </form>
+    </footer>
   </div>
 </body>
 </html>
