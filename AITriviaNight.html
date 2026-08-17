@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Trivia Night — AI Trivia That Gets You Thinking</title>
-  <meta name="description" content="AI-powered trivia for solo players, families, friends, and party hosts." />
+  <title data-i18n="trivia.title">AI Trivia Night — AI Trivia That Gets You Thinking</title>
+  <meta name="description" content="AI-powered trivia for solo players, families, friends, and party hosts." data-i18n-content="trivia.description" />
+  <script src="i18n.js" defer></script>
   <style>
 :root {
   --bg: #0b1020;
@@ -313,66 +314,66 @@ footer a { color: var(--muted); }
   <div class="page">
     <header>
       <a class="brand" href="index.html">
-        <div class="logo"><img src="eugener68-er-icon.png" alt="EugeneR68 Software LLC logo"></div>
+        <div class="logo"><img src="eugener68-er-icon.png" alt="EugeneR68 Software LLC logo" data-i18n-alt="common.logoAlt"></div>
         <span>EugeneR68 Software LLC</span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="AITriviaNight.html">AI Trivia Night</a>
+      <nav aria-label="Main navigation" data-i18n-aria-label="nav.aria">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="AITriviaNight.html" data-i18n="common.triviaName">AI Trivia Night</a>
         <a href="marketing.html">EbookLib</a>
-        <a href="feedback-form.html">Support</a>
+        <a href="feedback-form.html" data-i18n="nav.support">Support</a>
       </nav>
     </header>
     <main>
     
 <section class="hero">
   <div>
-    <div class="eyebrow"><span class="pulse"></span> AI-powered trivia • iPhone, iPad & Android</div>
-    <h1><span class="gradient">AI Trivia Night</span><br>Smarter questions. Limitless fun.</h1>
-    <p class="lead">Turn any night into a trivia night. Create personalized quizzes by theme, difficulty, and age group — then play solo, with family, or as the host of a full party game.</p>
+    <div class="eyebrow"><span class="pulse"></span> <span data-i18n="trivia.heroEyebrow">AI-powered trivia • iPhone, iPad & Android</span></div>
+    <h1><span class="gradient" data-i18n="common.triviaName">AI Trivia Night</span><br><span data-i18n="trivia.heroTitle2">Smarter questions. Limitless fun.</span></h1>
+    <p class="lead" data-i18n="trivia.heroLead">Turn any night into a trivia night. Create personalized quizzes by theme, difficulty, and age group — then play solo, with family, or as the host of a full party game.</p>
     <div class="actions">
-      <a class="button primary" href="https://apps.apple.com/us/app/ai-trivia-night/id6748327209">Download on the App Store</a>
-      <a class="button primary" href="https://play.google.com/store/apps/details?id=com.aitrivianight.app">Get it on Google Play</a>
-      <a class="button secondary" href="feedback-form.html">Contact support</a>
+      <a class="button primary" href="https://apps.apple.com/us/app/ai-trivia-night/id6748327209" data-i18n="common.appStore">Download on the App Store</a>
+      <a class="button primary" href="https://play.google.com/store/apps/details?id=com.aitrivianight.app" data-i18n="common.googlePlay">Get it on Google Play</a>
+      <a class="button secondary" href="feedback-form.html" data-i18n="common.contactSupport">Contact support</a>
     </div>
   </div>
   <aside class="preview-card">
     <div class="phone"><div class="screen">
-      <div class="screen-title"><span>AI Trivia Night</span><span>Fresh every game</span></div>
-      <h2>No recycled trivia.</h2>
-      <p>Choose your topic, tune the difficulty, set the age group, and let AI build questions tailored to your audience.</p>
-      <div class="feature"><strong>Team or Solo</strong><span>Host the room or challenge yourself.</span></div>
+      <div class="screen-title"><span data-i18n="common.triviaName">AI Trivia Night</span><span data-i18n="trivia.screenMeta">Fresh every game</span></div>
+      <h2 data-i18n="trivia.screenTitle">No recycled trivia.</h2>
+      <p data-i18n="trivia.screenBody">Choose your topic, tune the difficulty, set the age group, and let AI build questions tailored to your audience.</p>
+      <div class="feature"><strong data-i18n="trivia.screenFeatureTitle">Team or Solo</strong><span data-i18n="trivia.screenFeatureBody">Host the room or challenge yourself.</span></div>
     </div></div>
   </aside>
 </section>
 <section>
   <div class="section-head">
-    <h2>Built for real game nights</h2>
-    <p>Whether you are entertaining friends, playing with kids, or sharpening your own brain, AI Trivia Night adapts the experience to the moment.</p>
+    <h2 data-i18n="trivia.sectionTitle">Built for real game nights</h2>
+    <p data-i18n="trivia.sectionLead">Whether you are entertaining friends, playing with kids, or sharpening your own brain, AI Trivia Night adapts the experience to the moment.</p>
   </div>
   <div class="cards">
-    <article class="card"><div class="icon">🎯</div><h3>Personalized quizzes</h3><p>Choose themes, difficulty levels, and age group — the app adapts questions on the fly using AI.</p></article>
-    <article class="card"><div class="icon">🧠</div><h3>Always original</h3><p>No repeats, no memorization, no stale question packs. Every game can feel fresh.</p></article>
-    <article class="card"><div class="icon">🎉</div><h3>Party mode & solo play</h3><p>Challenge yourself or compete with friends. The quiz scales to match your crowd.</p></article>
+    <article class="card"><div class="icon">🎯</div><h3 data-i18n="trivia.card1Title">Personalized quizzes</h3><p data-i18n="trivia.card1Body">Choose themes, difficulty levels, and age group — the app adapts questions on the fly using AI.</p></article>
+    <article class="card"><div class="icon">🧠</div><h3 data-i18n="trivia.card2Title">Always original</h3><p data-i18n="trivia.card2Body">No repeats, no memorization, no stale question packs. Every game can feel fresh.</p></article>
+    <article class="card"><div class="icon">🎉</div><h3 data-i18n="trivia.card3Title">Party mode & solo play</h3><p data-i18n="trivia.card3Body">Challenge yourself or compete with friends. The quiz scales to match your crowd.</p></article>
   </div>
 </section>
 <section>
   <div class="notice">
-    <h2>Simple, fun interface</h2>
-    <p>Minimalist design, zero distractions — just questions, answers, explanations, scores, and bragging rights.</p>
-    <div class="actions"><a class="button primary" href="feedback-form.html">Send feedback</a></div>
+    <h2 data-i18n="trivia.noticeTitle">Simple, fun interface</h2>
+    <p data-i18n="trivia.noticeBody">Minimalist design, zero distractions — just questions, answers, explanations, scores, and bragging rights.</p>
+    <div class="actions"><a class="button primary" href="feedback-form.html" data-i18n="common.sendFeedback">Send feedback</a></div>
   </div>
 </section>
 
     </main>
     <footer>
-      <div>© 2026 EugeneR68 Software LLC. All rights reserved.</div>
+      <div data-i18n="footer.copyright">© 2026 EugeneR68 Software LLC. All rights reserved.</div>
       <div>
-        <a href="privacy.html">Privacy</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
         &nbsp;•&nbsp;
-        <a href="terms.html">Terms</a>
+        <a href="terms.html" data-i18n="footer.terms">Terms</a>
         &nbsp;•&nbsp;
-        <a href="feedback-form.html">Contact</a>
+        <a href="feedback-form.html" data-i18n="footer.contact">Contact</a>
       </div>
     </footer>
   </div>

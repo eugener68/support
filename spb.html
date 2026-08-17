@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simple Playlist Maker</title>
+  <title data-i18n="spb.title">Simple Playlist Maker</title>
+  <script src="i18n.js" defer></script>
   <style>
     :root { color-scheme: light dark; }
-    body { max-width: 920px; margin: 32px auto; padding: 0 16px; font: 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+    body { max-width: 920px; margin: 32px auto; padding: 0 16px; font: 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; padding-top: 56px; }
     h1 { margin: 0 0 6px; font-size: 36px; line-height: 1.2; }
     h2 { margin: 22px 0 8px; font-size: 20px; }
     p { margin: 10px 0; }
@@ -20,49 +21,49 @@
 </head>
 <body>
   <h1>Simple Playlist Maker</h1>
-  <p class="sub">Auto-generate playlists for Spotify from your artist list</p>
+  <p class="sub" data-i18n="spb.sub">Auto-generate playlists for Spotify from your artist list</p>
 
-  <h2>About Playlist Maker</h2>
-  <p>
+  <h2 data-i18n="spb.aboutTitle">About Playlist Maker</h2>
+  <p data-i18n="spb.aboutBody">
     Playlist Maker is an iOS app that creates playlists from a user-provided list of artists. These playlists could be imported to user's personal Spotify account
     You can type artist names manually, paste a list from the clipboard, or import artists from CSV or TXT files.
     The app helps you control variety and structure, so your playlist feels balanced instead of repetitive.
   </p>
 
-  <h2>Key Features</h2>
+  <h2 data-i18n="spb.featuresTitle">Key Features</h2>
   <ul>
-    <li>Create playlists from an artist list (manual entry, paste, or CSV/TXT import)</li>
-    <li>Set the total number of tracks</li>
-    <li>Limit tracks per artist to keep a good mix</li>
-    <li>Shuffle the playlist for variety</li>
-    <li>Prefer original versions when available</li>
-    <li>Auto-generate playlist names with an optional current date</li>
-    <li>Dry Run mode: preview the track list without creating a playlist on Spotify</li>
-    <li>Localization: the app follows your iPhone language (Russian supported)</li>
+    <li data-i18n="spb.f1">Create playlists from an artist list (manual entry, paste, or CSV/TXT import)</li>
+    <li data-i18n="spb.f2">Set the total number of tracks</li>
+    <li data-i18n="spb.f3">Limit tracks per artist to keep a good mix</li>
+    <li data-i18n="spb.f4">Shuffle the playlist for variety</li>
+    <li data-i18n="spb.f5">Prefer original versions when available</li>
+    <li data-i18n="spb.f6">Auto-generate playlist names with an optional current date</li>
+    <li data-i18n="spb.f7">Dry Run mode: preview the track list without creating a playlist on Spotify</li>
+    <li data-i18n="spb.f8">Localization: the app follows your iPhone language (Russian supported)</li>
   </ul>
 
-  <h2>How It Works</h2>
-  <p>
+  <h2 data-i18n="spb.howTitle">How It Works</h2>
+  <p data-i18n="spb.howBody">
     First, sign in to your Spotify account. Then choose your playlist settings, enter a playlist name (optionally with
     today’s date), and run a Dry Run to review the generated track list. If everything looks right, create the playlist
     in Spotify and start listening.
   </p>
 
-  <h2>Privacy</h2>
-  <p>
+  <h2 data-i18n="spb.privacyTitle">Privacy</h2>
+  <p data-i18n="spb.privacyBody">
     Your Spotify account data is not stored or shared by the app. Authentication is used only to create playlists in your
     own Spotify account.
   </p>
-  <p class="note">
+  <p class="note" data-i18n="spb.note">
     Spotify is a trademark of Spotify AB. This app is not affiliated with or endorsed by Spotify.
   </p>
 
-  <h2>Get Started</h2>
-  <p>
+  <h2 data-i18n="spb.startTitle">Get Started</h2>
+  <p data-i18n="spb.startBody">
     Download Simple Playlist Maker from the Apple App Store and build playlists from your artist lists in seconds.
   </p>
 
-  <footer>
+  <footer data-i18n="spb.footer">
     © 2025 Eugene Roitberg. All rights reserved.
   </footer>
 </body>

@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AniMood – Your mood, your anime self</title>
+    <title data-i18n="animood.title">AniMood – Your mood, your anime self</title>
+    <script src="i18n.js" defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,8 +15,9 @@
         header {
             background: #2c3e50;
             color: white;
-            padding: 20px 0;
+            padding: 20px 90px;
             text-align: center;
+            position: relative;
         }
         section {
             padding: 20px;
@@ -46,12 +48,12 @@
 <body>
     <header>
         <h1>AniMood</h1>
-        <p>Your Mood, Anime-fied!</p>
+        <p data-i18n="animood.tagline">Your Mood, Anime-fied!</p>
     </header>
 
     <section>
-        <h2>About AniMood</h2>
-        <p>
+        <h2 data-i18n="animood.aboutTitle">About AniMood</h2>
+        <p data-i18n="animood.aboutBody">
             AniMood is a magical AI-powered app that turns your photo into a popular Anime studio-style avatar
             that reflects your current mood. Whether you’re happy, sad, angry, or excited — just pick a photo, select how you feel,
             and let the AniMood magic do the rest.
@@ -59,26 +61,26 @@
     </section>
 
     <section>
-        <h2>Key Features</h2>
+        <h2 data-i18n="animood.featuresTitle">Key Features</h2>
         <ul>
-            <li>Take a photo or choose one from your gallery</li>
-            <li>Select your current mood from a simple list</li>
-            <li>AI transforms your photo into a popular Anime studio style' avatar</li>
-            <li>Supports a variety of moods: happy, sad, angry, excited, and more</li>
-            <li>Save or share your mood avatar with friends</li>
-            <li>Powered by a custom-trained model for authentic animation-inspired results</li>
+            <li data-i18n="animood.f1">Take a photo or choose one from your gallery</li>
+            <li data-i18n="animood.f2">Select your current mood from a simple list</li>
+            <li data-i18n="animood.f3">AI transforms your photo into a popular Anime studio style' avatar</li>
+            <li data-i18n="animood.f4">Supports a variety of moods: happy, sad, angry, excited, and more</li>
+            <li data-i18n="animood.f5">Save or share your mood avatar with friends</li>
+            <li data-i18n="animood.f6">Powered by a custom-trained model for authentic animation-inspired results</li>
         </ul>
     </section>
 
     <section>
-        <h2>Get Started</h2>
-        <p>
+        <h2 data-i18n="animood.startTitle">Get Started</h2>
+        <p data-i18n="animood.startBody">
             Download AniMood from the App Store and express yourself in the most enchanting way possible.
             It’s your face, your feelings — reimagined through the lens of magical animation.
         </p>
     </section>
 
-    <footer>
+    <footer data-i18n="animood.footer">
         &copy; 2025 EugeneR. All rights reserved.
     </footer>
 </body>
