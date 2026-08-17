@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EbookLib — OPDS Catalog Browser, Library and Reader</title>
-  <meta name="description" content="Browse OPDS catalogs, download books, and read EPUB or PDF files across Apple devices." />
+  <title data-i18n="ebook.title">EbookLib — OPDS Catalog Browser, Library and Reader</title>
+  <meta name="description" content="Browse OPDS catalogs, download books, and read EPUB or PDF files across Apple devices." data-i18n-content="ebook.description" />
+  <script src="i18n.js" defer></script>
   <style>
 :root {
   --bg: #0b1020;
@@ -313,67 +314,67 @@ footer a { color: var(--muted); }
   <div class="page">
     <header>
       <a class="brand" href="index.html">
-        <div class="logo"><img src="eugener68-er-icon.png" alt="EugeneR68 Software LLC logo"></div>
+        <div class="logo"><img src="eugener68-er-icon.png" alt="EugeneR68 Software LLC logo" data-i18n-alt="common.logoAlt"></div>
         <span>EugeneR68 Software LLC</span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="AITriviaNight.html">AI Trivia Night</a>
+      <nav aria-label="Main navigation" data-i18n-aria-label="nav.aria">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="AITriviaNight.html" data-i18n="common.triviaName">AI Trivia Night</a>
         <a href="marketing.html">EbookLib</a>
-        <a href="feedback-form.html">Support</a>
+        <a href="feedback-form.html" data-i18n="nav.support">Support</a>
       </nav>
     </header>
     <main>
       
 <section class="hero">
   <div>
-    <div class="eyebrow"><span class="pulse"></span> OPDS catalog browser • Library • Reader</div>
-    <h1><span class="gradient">EbookLib</span><br>Your eBook catalogs, library, and reader in one place.</h1>
-    <p class="lead">Browse OPDS catalogs, download books, organize your library, and read EPUB or PDF files across your Apple devices.</p>
+    <div class="eyebrow"><span class="pulse"></span> <span data-i18n="ebook.heroEyebrow">OPDS catalog browser • Library • Reader</span></div>
+    <h1><span class="gradient">EbookLib</span><br><span data-i18n="ebook.heroTitle2">Your eBook catalogs, library, and reader in one place.</span></h1>
+    <p class="lead" data-i18n="ebook.heroLead">Browse OPDS catalogs, download books, organize your library, and read EPUB or PDF files across your Apple devices.</p>
     <div class="actions">
-      <a class="button primary" href="https://apps.apple.com/us/app/ebooklib/id6747648843">Download on the App Store</a>
-      <a class="button secondary" href="feedback-form.html">Contact support</a>
+      <a class="button primary" href="https://apps.apple.com/us/app/ebooklib/id6747648843" data-i18n="common.appStore">Download on the App Store</a>
+      <a class="button secondary" href="feedback-form.html" data-i18n="common.contactSupport">Contact support</a>
     </div>
   </div>
   <aside class="preview-card">
     <div class="phone"><div class="screen">
       <div class="screen-title"><span>EbookLib</span><span>OPDS • EPUB • PDF</span></div>
-      <h2>Find. Download. Read.</h2>
-      <p>A modern library workflow for people who use OPDS catalogs and want their books under one roof.</p>
-      <div class="feature"><strong>iCloud sync</strong><span>Your catalog list and downloaded books stay available across iPhone and iPad.</span></div>
+      <h2 data-i18n="ebook.screenTitle">Find. Download. Read.</h2>
+      <p data-i18n="ebook.screenBody">A modern library workflow for people who use OPDS catalogs and want their books under one roof.</p>
+      <div class="feature"><strong data-i18n="ebook.screenFeatureTitle">iCloud sync</strong><span data-i18n="ebook.screenFeatureBody">Your catalog list and downloaded books stay available across iPhone and iPad.</span></div>
     </div></div>
   </aside>
 </section>
 <section>
   <div class="section-head">
-    <h2>Key features</h2>
-    <p>Designed for readers who want control over catalogs, downloads, formats, and reading progress.</p>
+    <h2 data-i18n="ebook.sectionTitle">Key features</h2>
+    <p data-i18n="ebook.sectionLead">Designed for readers who want control over catalogs, downloads, formats, and reading progress.</p>
   </div>
   <div class="feature-list">
-    <div class="feature"><strong>OPDS catalog management</strong><span>Add, edit, delete, browse, and search OPDS catalogs from your own list or a preset web list.</span></div>
-    <div class="feature"><strong>Library tab</strong><span>View, search, sort, and organize downloaded books in one clean place.</span></div>
-    <div class="feature"><strong>Built-in reading</strong><span>Open EPUB and PDF books in the application reader, or choose Apple Books for EPUB files.</span></div>
-    <div class="feature"><strong>Reading progress</strong><span>Reopen a book from where you stopped and manage your active reading list.</span></div>
-    <div class="feature"><strong>Format flexibility</strong><span>Download EPUB, PDF, and FB2 files. FB2 can be opened in the reader app of your choice.</span></div>
-    <div class="feature"><strong>iCloud integration</strong><span>Keep your catalog list and downloaded books synchronized across iPhone and iPad.</span></div>
+    <div class="feature"><strong data-i18n="ebook.f1Title">OPDS catalog management</strong><span data-i18n="ebook.f1Body">Add, edit, delete, browse, and search OPDS catalogs from your own list or a preset web list.</span></div>
+    <div class="feature"><strong data-i18n="ebook.f2Title">Library tab</strong><span data-i18n="ebook.f2Body">View, search, sort, and organize downloaded books in one clean place.</span></div>
+    <div class="feature"><strong data-i18n="ebook.f3Title">Built-in reading</strong><span data-i18n="ebook.f3Body">Open EPUB and PDF books in the application reader, or choose Apple Books for EPUB files.</span></div>
+    <div class="feature"><strong data-i18n="ebook.f4Title">Reading progress</strong><span data-i18n="ebook.f4Body">Reopen a book from where you stopped and manage your active reading list.</span></div>
+    <div class="feature"><strong data-i18n="ebook.f5Title">Format flexibility</strong><span data-i18n="ebook.f5Body">Download EPUB, PDF, and FB2 files. FB2 can be opened in the reader app of your choice.</span></div>
+    <div class="feature"><strong data-i18n="ebook.f6Title">iCloud integration</strong><span data-i18n="ebook.f6Body">Keep your catalog list and downloaded books synchronized across iPhone and iPad.</span></div>
   </div>
 </section>
 <section>
   <div class="notice">
-    <h2>Everything for catalog-based reading</h2>
-    <p>No need to jump between apps just to discover, download, organize, and read. EbookLib brings the full flow together.</p>
+    <h2 data-i18n="ebook.noticeTitle">Everything for catalog-based reading</h2>
+    <p data-i18n="ebook.noticeBody">No need to jump between apps just to discover, download, organize, and read. EbookLib brings the full flow together.</p>
   </div>
 </section>
 
     </main>
     <footer>
-      <div>© 2026 EugeneR68 Software LLC. All rights reserved.</div>
+      <div data-i18n="footer.copyright">© 2026 EugeneR68 Software LLC. All rights reserved.</div>
       <div>
-        <a href="privacy.html">Privacy</a>
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy</a>
         &nbsp;•&nbsp;
-        <a href="terms.html">Terms</a>
+        <a href="terms.html" data-i18n="footer.terms">Terms</a>
         &nbsp;•&nbsp;
-        <a href="feedback-form.html">Contact</a>
+        <a href="feedback-form.html" data-i18n="footer.contact">Contact</a>
       </div>
     </footer>
   </div>
